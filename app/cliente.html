@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
 
-<h1 class="text-center">Cliente</h1>
+<h1 class="ms-2">Cliente</h1>
 
 <div id="mensagemView"></div>
 
-<form class="form">
-    <!--
-    <div class="form-group">
-        <label for="data">Data de Criação</label>
-        <input type="date" id="data" class="form-control" required autofocus/>
-    </div>
-    -->
-    <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" min="1" step="1" id="nome" class="form-control" value="1" required/>
+<form class="ms-3">
+    <div class="col-md-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" required/>
     </div>
 
-    <div class="form-group">
-        <label for="cpf">cpf</label>
-        <input id="cpf" type="text" class="form-control" min="0.01" step="0.01" value="0.0" required/>
+    <div class="col-md-3">
+        <label for="nome" class="form-label">CPF</label>
+        <input type="text" class="form-control" id="cpf" required>
     </div>
 
-    <button class="btn btn-primary" type="submit" >Inserir</button>
+    <div class="col-md-3">
+        <label for="conta">Conta</label>
+        <input type="text" id="conta" class="form-control" required/>
+    </div>
+
+    <div class="col-md-3">
+        <label for="saldo">Saldo</label>
+        <input id="saldo" type="number" class="form-control" min="0.01" step="0.01" required/>
+    </div>
+    <div class="mt-2 col-md-3">
+        <button class="btn btn-primary" type="submit" onclick="clienteController.inserir(event)">Inserir</button>
+    </div>
 </form>
 
 <br>
 <br>
-<!--
+
 <table>
     <thead>
     <tr>
-        <th>DATA DE CRIAÇÃO</th>
-        <th>CONTA</th>
-        <th>SALDO</th>
+        <th>CLIENTES INFO</th>
     </tr>
     </thead>
 
@@ -48,14 +53,16 @@
     <tfoot>
     </tfoot>
 </table>
--->
+
 <script src="js/model/conta.js"></script>
 <script src="js/model/conta-bonificada.js"></script>
 <script src="js/model/poupanca.js"></script>
 <script src="js/model/contas.js"></script>
 <script src="js/controller/conta-controller.js"></script>
+<script src="js/controller/cliente-controller.js"></script>
 <script src="js/model/cliente.js"></script>
 <script src="js/model/clientes.js"></script>
 <script src="js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

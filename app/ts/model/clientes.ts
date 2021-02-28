@@ -3,6 +3,10 @@ class Clientes{
     
     constructor(){
         this.clientes = new Array<Cliente>();
+        const cli1 = new Cliente('Jack', '000-000-000-00', new Conta('1', 1000));
+        const cli2 = new Cliente('John', '111-111-111-11', new Conta('2', 2000));
+        const cli3 = new Cliente('Jane', '222-222-222-22', new Conta('3', 3000));
+        this.clientes.push(cli1, cli2, cli3);
     }
 
     inserir(cliente: Cliente): void{
